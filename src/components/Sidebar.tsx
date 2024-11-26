@@ -20,14 +20,14 @@ const Sidebar = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) 
   ]
 
   return (
-    <aside className={`bg-white w-60 fixed inset-y-0 left-0 transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out z-30 lg:translate-x-0 lg:static lg:inset-0`}>
+    <aside className={`bg-white w-60 pt-4  fixed inset-y-0 left-0 transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out z-30 lg:translate-x-0 lg:static lg:inset-0`}>
       <div className="flex justify-between items-center p-4 lg:hidden">
         <img src="/youtube-logo.svg" alt="YouTube" className="h-6" />
         <Button variant="ghost" size="icon" onClick={onClose}>
           <X className="h-6 w-6" />
         </Button>
       </div>
-      <ScrollArea className="h-full py-2 ml-1.5">
+      <ScrollArea className="py-2 ml-1.5 lg:fixed h-[calc(100vh-4rem)]">
         <nav className="px-4 lg:px-8">
           <ul className="space-y-1">
             {menuItems.map((item, index) => (
